@@ -1,0 +1,99 @@
+:root {
+    --default-black: #000;
+    --default-white: #fff;
+    --dark-gray: #333;
+    --light-gray: #999;
+    --light-blue: #0062B8;
+    --blue: #002E5D;
+    --grid-template: auto 1fr auto / auto 1fr auto;
+    --border: 1px solid var(--default-black);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header span {
+    display: block;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--blue);
+    color: var(--default-white);
+}
+
+nav {
+    background-color: var(--dark-gray);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    padding: .5rem;
+    margin: .15rem;
+    border-radius: 8px;
+}
+
+nav ul li:hover {
+    background-color: var(--light-blue);
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: var(--default-white);
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template: var(--grid-template);
+}
+
+/* Classes */
+.card {
+    display: grid;
+    grid-template: var(--grid-template);
+    margin: 1rem;
+    border: var(--border);
+    border-radius: 8px;
+}
+
+.card-title {
+    padding: .5rem;
+    background-color: var(--blue);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    grid-column: 1 / 6;
+    text-align: center;
+    color: white;
+}
+
+.card-image {
+    margin: 1rem;
+    background-color: green;
+    border: 10px solid black;
+    grid-column: 5 / 6;
+}
+
+.card-content {
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+
+.card-content ul {
+    list-style: none;
+}
+
+.about-me {
+    grid-column: 1 / 4;
+}
+
+.resources {
+    grid-column: 4 / 6;
+}
