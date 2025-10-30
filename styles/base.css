@@ -16,18 +16,24 @@
 }
 
 body {
+    font-family: "Roboto", sans-serif;
     display: grid;
     grid-template: var(--grid-rows);
     grid-template-columns: 1fr;
     min-height: 100vh;
 }
 
-header span {
-    display: block;
-    padding: 1.5rem;
+h1 {
     text-align: center;
-    background-color: var(--blue);
-    color: var(--default-white);
+    align-self: self-end;
+}
+
+header, main, footer {
+    padding: 0 1rem;
+}
+
+header {
+    text-align: center;
 }
 
 nav {
@@ -60,27 +66,30 @@ nav ul li a {
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    margin-top: 150px;
+    grid-template-rows: 1fr 1fr;
     padding: 0 1rem;
     gap: 1rem;
     align-items: start;
+    align-self: self-start;
+    margin: -250px 0 0 0;
+    z-index: -1;
 }
 
-aside {
+section {
+    grid-row: 2;
+}
+
+section .card {
     grid-column: 2;
 }
 
 footer {
-    margin: 200px 0 0;
+    margin: 250px 0 0 0;
     padding: 0.25rem 0;
     font-size: 0.9rem;
     background-color: var(--blue);
     color: var(--default-white);
     text-align: center;
-}
-
-footer div {
-    margin-top: 0.75rem;
 }
 
 /* Classes */
@@ -123,8 +132,19 @@ footer div {
     margin-left: 1rem;
 }
 
+.footer-container {
+    margin-top: 0.75rem;
+}
+
 .currentYear {
     grid-row: 1;
+}
+
+#course-title {
+    display: block;
+    padding: 1.5rem;
+    background-color: var(--blue);
+    color: var(--default-white);
 }
 
 #lastModified {

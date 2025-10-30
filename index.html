@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 — Dynamic Web Fundamentals — Robert McGrew</title>
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta name="description" content="This is a summary about Robert McGrew for WDD 131 — Dynamic Web Fundamentals">
     <meta name="author" content="Robert McGrew">
     <script src="scripts/getdates.js" defer></script>
@@ -27,33 +30,34 @@
         </nav>
     </header>
     <main>
-        <!-- <div class="main-content"></div> -->
-        <!-- <h1>Robert McGrew</h1> -->
-            <div class="card">
-                <div class="card-title">About Me</div>
-                <img class="card-image" src="images/me.jpg" alt="image of me">
-                <p class="about-me-card-content">My name is Robert McGrew. I was born and raised in Southern California, and have lived in Utah for the last 8 years. I live in Logan, Utah with my beautiful wife and 2 amazing sons. I am currently working as a full-stack developer and hope to continue learning more to further my career!</p>
+        <h1>Robert McGrew</h1>
+        <section class="card">
+            <div class="card-title">About Me</div>
+            <img class="card-image" src="images/me.jpg" alt="image of me">
+            <p class="about-me-card-content">My name is Robert McGrew. I was born and raised in Southern California, and
+                have lived in Utah for the last 8 years. I live in Logan, Utah with my beautiful wife and 2 amazing
+                sons. I am currently working as a full-stack developer and hope to continue learning more to further my
+                career!
+            </p>
+        </section>
+        <section class="card resources">
+            <div class="card-title">Technical Skills</div>
+            <div class="card-content">
+                <ul>
+                    <li>1. <a href="#">Resourse 1</a></li>
+                    <li>2. <a href="#">Resourse 2</a></li>
+                    <li>3. <a href="#">Resourse 3</a></li>
+                    <li>4. <a href="#">Resourse 4</a></li>
+                    <li>5. <a href="#">Resourse 5</a></li>
+                </ul>
             </div>
-        <aside>
-            <div class="card">
-                <div class="card-title">Web Deb Resources</div>
-                <div class="card-content">
-                    <ul>
-                        <li>1. <a href="#">Resourse 1</a></li>
-                        <li>2. <a href="#">Resourse 2</a></li>
-                        <li>3. <a href="#">Resourse 3</a></li>
-                        <li>4. <a href="#">Resourse 4</a></li>
-                        <li>5. <a href="#">Resourse 5</a></li>
-                    </ul>
-                </div>
-            </div>
-            </aside>
+        </section>
     </main>
     <footer>
-        <div>
-        <p class="currentYear">© <span id="currentYear"></span>💻 Robert McGrew Utah, USA 💻</p>
-        <p id="lastModified"></p>
-    </div>
+        <div class="footer-container">
+            <p class="currentYear">© <span id="currentYear"></span>💻 Robert McGrew Utah, USA 💻</p>
+            <p id="lastModified"></p>
+        </div>
     </footer>
 
 </body>
