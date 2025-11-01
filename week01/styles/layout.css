@@ -28,6 +28,7 @@ header h1 {
 
 nav {
     background-color: var(--default-black);
+    color: var(--default-white);
 }
 
 nav ul {
