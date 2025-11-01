@@ -38,6 +38,7 @@ header {
 
 nav {
     background-color: var(--dark-gray);
+    color: var(--default-white);
 }
 
 nav ul {
