@@ -116,7 +116,6 @@ footer {
 }
 
 .card-image {
-    grid-column: 1;
     grid-column: 2;
     width: 150px;
     height: auto;
