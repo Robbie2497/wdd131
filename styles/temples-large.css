@@ -1,14 +1,12 @@
-:root {
-    --default-black: #000;
-    --default-white: #fff;
+@media screen and (min-width: 600px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@media screen and (min-width: 900px) {
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-}
