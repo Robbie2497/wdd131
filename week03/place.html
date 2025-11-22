@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 — W03 Assignment — Country Page</title>
+    <meta name="description" content="Assignment for week 3">
+    <meta name="author" content="Robert McGrew">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>IRELAND</h1>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <picture>
+                <source srcset="images/ireland-sm.webp" media="(max-width: 600px)">
+                <source srcset="images/ireland-lg.webp" media="(min-width: 601px)">
+
+                <img src="images/ireland-lg.webp" alt="ireland image">
+            </picture>
+        </section>
+
+        <div class="country-data-container">
+        <section class="country-data">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area:</dt><dd>84,421 sq km</dd>
+                <dt>Population:</dt><dd>5,308,039</dd>
+                <dt>Capital:</dt><dd>Dublin</dd>
+                <dt>Languages:</dt><dd>Irish, English</dd>
+                <dt>Currency:</dt><dd>Euro</dd>
+                <dt>Time Zone:</dt><dd>UTC+0 / UTC+1 (DST)</dd>
+                <dt>Calling Code:</dt><dd>+353</dd>
+                <dt>Internet TLD:</dt><dd>.ie</dd>
+            </dl>
+        </section>
+        </div>
+
+        <div class="weather-data-container">
+        <section class="weather-data">
+            <h2>Weather</h2>
+
+            <img src="images/weather.svg" alt="Weather Icon" class="weather-icon-mobile">
+
+            <dl>
+                <dt>Temperature:</dt><dd><span id="temp">44</span> ℉</dd>
+                <dt>Conditions:</dt><dd>Mostly Clear</dd>
+                <dt>Wind:</dt><dd><span id="wind">12</span> mph</dd>
+                <dt>Wind Chill:</dt><dd><span id="windchill"></span></dd>
+            </dl>
+        </section>
+        </div>
+
+
+
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Robert McGrew | Ireland</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+
+</html>
