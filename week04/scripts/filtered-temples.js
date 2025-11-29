@@ -1,12 +1,7 @@
-const countries = ["Canada", "Chili", "Colombia", "Croatia", "Costa Rica"];
-const countriesLong = countries.filter((country) => country.length > 7);
-
-console.log(countriesLong);
-
-
+const header = document.querySelector("main h1");
 let now = new Date();
 document.getElementById('currentYear').innerHTML = `&copy;${now.getFullYear()}`;
-document.getElementById('#lastModified').textContent = `Last Modification ${document.lastModified}`;
+document.getElementById('lastModified').textContent = `Last Modification ${document.lastModified}`;
 
 const temples = [
   {
@@ -15,7 +10,7 @@ const temples = [
     dedicated: "2005, August, 7",
     area: 11500,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+    "images/Aba Nigeria Temple.webp"
   },
   {
     templeName: "Manti Utah",
@@ -23,7 +18,7 @@ const temples = [
     dedicated: "1888, May, 21",
     area: 74792,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+    "images/Manti Temple.webp"
   },
   {
     templeName: "Payson Utah",
@@ -31,7 +26,7 @@ const temples = [
     dedicated: "2015, June, 7",
     area: 96630,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+    "images/Payson Temple.webp"
   },
   {
     templeName: "Yigo Guam",
@@ -39,7 +34,7 @@ const temples = [
     dedicated: "2020, May, 2",
     area: 6861,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+    "images/Yigo Guam Temple.webp"
   },
   {
     templeName: "Washington D.C.",
@@ -47,7 +42,7 @@ const temples = [
     dedicated: "1974, November, 19",
     area: 156558,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+    "images/Washington DC Temple.webp"
   },
   {
     templeName: "Lima Perú",
@@ -55,7 +50,7 @@ const temples = [
     dedicated: "1986, January, 10",
     area: 9600,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+    "images/Lima Peru Temple.webp"
   },
   {
     templeName: "Mexico City Mexico",
@@ -63,7 +58,7 @@ const temples = [
     dedicated: "1983, December, 2",
     area: 116642,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    "images/Mexico City Mexico Temple.webp"
   },
   {
     templeName: "Provo City Center",
@@ -71,15 +66,15 @@ const temples = [
     dedicated: "2016, March, 20",
     area: 85084,
     imageUrl:
-    "https://www.ffkr.com/wp-content/uploads/2018/10/Provo-City-Center-Temple-Exterior-West-Elevation.jpg"
+    "images/Provo City Center Temple.webp"
   },
   {
     templeName: "San Diego",
     location: "San Diego, California, United States",
     dedicated: "1993, April, 25",
     area: 72000,
-    imageUrl: 
-    "https://wallpaperaccess.com/full/2150423.jpg"
+    imageUrl:
+    "images/San Diego Temple.webp"
   },
   {
     templeName: "Ribeirão Preto",
@@ -87,14 +82,52 @@ const temples = [
     dedicated: "2024, June, 22",
     area: 32000,
     imageUrl: 
-    "https://churchofjesuschristtemples.org/assets/img/temples/ribeirao-preto-brazil-temple/ribeirao-preto-brazil-temple-44186.jpg",
+    "images/Riberao Preto Brazil Temple.webp",
   }
 ];
 
-console.log(temples);
+const getDedicatedYear = (temples) => {
+  const dedicatedYear = temples.dedicated.split(",")[0];
+  return parseInt(dedicatedYear)
+}
 
-function createTempleCard() {
-    temples.forEach(temple => {
+createTempleCard(temples);
+
+const home = document.querySelector("#home");
+const older = document.querySelector("#old");
+const newer = document.querySelector("#new");
+const large = document.querySelector("#large");
+const small = document.querySelector("#small");
+
+home.addEventListener("click", () => {
+  header.textContent = "Home";
+  createTempleCard(temples.filter(temple => temple.area ));
+});
+
+newer.addEventListener("click", () => {
+  header.textContent = "New";
+  createTempleCard(temples.filter(temple => getDedicatedYear(temple) > 2000));
+});
+
+older.addEventListener("click", () => {
+  header.textContent = "Old";
+  createTempleCard(temples.filter(temple => getDedicatedYear(temple) < 2000));
+});
+
+large.addEventListener("click", () => {
+  header.textContent = "Large";
+  createTempleCard(temples.filter(temple => temple.area > 90000));
+});
+
+small.addEventListener("click", () => {
+  header.textContent = "Small";
+  createTempleCard(temples.filter(temple => temple.area < 10000));
+});
+
+function createTempleCard(filteredTemples) {
+  const templeContainer = document.querySelector("#templesContainer");
+  templeContainer.innerHTML = "";
+    filteredTemples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
@@ -108,6 +141,8 @@ function createTempleCard() {
         area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
         image.setAttribute("src", temple.imageUrl)
         image.setAttribute("alt", `${temple.templeName} Temple`);
+        image.setAttribute("width", "350");
+        image.setAttribute("height", "400");
         image.setAttribute("loading", "lazy");
 
         card.appendChild(name);
@@ -119,5 +154,3 @@ function createTempleCard() {
         document.querySelector("#templesContainer").appendChild(card);
     });
 }
-
-createTempleCard();
