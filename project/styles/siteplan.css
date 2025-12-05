@@ -15,6 +15,16 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    padding-bottom: 6rem;
+}
+
+h2 {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+p {
+    padding: 0.25rem;
 }
 
 header {
@@ -23,23 +33,29 @@ header {
     align-items: center;
     background-color: var(--defaultBlue);
     color: var(--defaultWhite);
+    padding: 0.5rem 1rem;
 }
 
-header ul a {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 1rem;
+header ul {
     list-style: none;
 }
 
-header ul a  {
-    text-decoration: none;
-    color: var(--defaultWhite);
+header ul li {
+    display: inline-block;
+    margin: 0.5rem;
 }
 
-header ul a:hover {
-    background-color: var(--lighterBlue);
+header ul li a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    list-style: none;
+    text-decoration: none;
+    color: var(--defaultWhite);
     border-radius: 8px;
+}
+
+header ul li a:hover {
+    background-color: var(--lighterBlue);
 }
 
 header .logo {
@@ -53,56 +69,52 @@ footer {
     align-items: center;
     width: 100%;
     height: 5rem;
-    position: fixed;
-    bottom: 0;
+    margin-top: 50px;
     background-color: var(--defaultBlue);
     color: var(--defaultWhite);
 }
 
 
 /* Classes */
-.hero {
-    margin: 1rem;
-    float: right;
-}
-
-.hero-text {
-    position: relative;
-}
-
-.main-contianer {
+.main-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10rem 0;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    margin: 3rem 1rem;
     border: var(--defaultBorder);
+    align-items: start;
 }
 
-.company-name {
-    margin-right: 20rem;
+.main-container section {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .content-heading {
-    margin: 1rem;
+    margin-bottom: 0.5rem;
 }
 
-.content {
-    margin: 1rem;
+.content { 
+    line-height: 1.5;
 }
 
 .learn-more-btn-container {
-    position: relative;
+    margin-right: 1rem;
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .learn-more-btn {
-    margin: 1rem;
-    padding: 1rem;
-    width: 25%;
+   padding: 0.75rem 1.25rem;
     border-radius: 8px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    border: none;
     background-color: var(--lighterBlue);
     color: var(--defaultWhite);
+    font-size: 1rem;
 }
 
 .learn-more-btn:hover {
@@ -110,8 +122,47 @@ footer {
     cursor: pointer;
 }
 
+.wireframe-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 1rem 6rem;
+}
+
+.wireframe-container figure {
+    text-align: center;
+}
+
+.wireframe-container img {
+    max-width: 100%;
+    height: auto;
+    border: var(--defaultBorder);
+}
+
 #home-gif {
     width: 100%;
     height: auto;
     padding: 1rem;
+}
+
+@media screen and (max-width: 786px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .company-name {
+        margin-right: 0;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "image" "text" "button";
+        margin-top: 2rem;
+    }
+
+    .wireframe-container {
+        grid-template-columns: 1fr;
+    }    
 }
