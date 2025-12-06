@@ -1,0 +1,46 @@
+:root {
+    --default-white: #fff;
+    --default-purple: #2d032b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--default-purple);
+    color: white;
+}
+
+header h1 {
+    padding: 1rem;
+}
+
+main {
+    padding: 1rem;
+    height: 648px;
+}
+
+legend {
+    margin-top: 1rem;
+}
+
+footer {
+    margin-top: 10rem;
+    padding: .5rem 2%;
+    text-align: center;
+    background-color: var(--default-purple);
+    color: var(--default-white);
+}
+
+footer p {
+    padding: 0.25rem;
+}
