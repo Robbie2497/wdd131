@@ -30,6 +30,8 @@ main {
 }
 
 legend {
+    display: flex;
+    flex-direction: column;
     margin-top: 1rem;
 }
 
@@ -47,6 +49,6 @@ footer p {
 
 @media screen and (max-width: 498px) {
     body {
-        background-color: blue;
+
     }
 }
