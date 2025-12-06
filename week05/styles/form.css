@@ -44,3 +44,9 @@ footer {
 footer p {
     padding: 0.25rem;
 }
+
+@media screen and (max-width: 498px) {
+    body {
+        background-color: blue;
+    }
+}
