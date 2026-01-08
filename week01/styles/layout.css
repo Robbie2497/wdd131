@@ -1,0 +1,97 @@
+:root {
+    /* GLOBALS  */
+    --defaultBlack: #000;
+    --defaultWhite: #fff;
+    --darkGray: #535353;
+    --lightGray: #CCC;
+}
+
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ELEMENTS */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    grid-column: 1 / 1;
+}
+
+aside {
+    grid-column: 2 / 2;
+    background-color: var(--defaultWhite);
+}
+
+footer {
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+    background-color: var(--darkGray);
+    color: var(--defaultWhite);
+    text-align: center;
+}
+
+
+/* IDS */
+
+
+/* CLASSES */
+.header-content {
+    color: var(--defaultWhite);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-bottom: 5rem;
+    background-color: var(--darkGray);
+}
+
+.link-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--defaultBlack);
+}
+
+.link-group a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: var(--defaultWhite);
+}
+
+.link-group a:hover {
+    transform: translateY(-3px) scale(1.1);
+    background-color: var(--defaultBlack);
+    color: aqua;
+}
+
+.body-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    background-color: var(--lightGray);
+}
+
+.grid-container h1 {
+    padding: 1rem;
+}
+
+
