@@ -1,0 +1,129 @@
+:root {
+    --defaultBlack: #000;
+    --defaultWhite: #fff;
+    --defaultBlue: #1d4d72;
+    --defaultYellow: #fcee4f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+}
+
+h1 {
+	grid-column: 1 / -1;
+	text-align: center;
+    margin: 1rem 0;
+}
+
+header, main, footer {
+    padding: 0 1rem;
+}
+
+header {
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    background-color: var(--defaultBlack);
+    color: var(--defaultWhite);
+}
+
+nav ul {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    padding: .5rem;
+    margin: .15rem;
+    border-radius: 8px;
+}
+
+nav ul li a {
+    color: var(--defaultWhite);
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: lightblue;
+    transform: translate(-3px 0);
+    cursor: pointer;
+    a {
+        color: var(--defaultBlack);
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 1rem;
+}
+
+footer {
+    background-color: var(--defaultBlue);
+    height: 1rem;
+    padding: 5rem;
+    text-align: center;
+    color: var(--defaultWhite);
+}
+
+#course-title {
+    display: block;
+    padding: 1.5rem;
+    background-color: var(--defaultBlue);
+    color: white;
+}
+
+#last-modified {
+    color: var(--defaultYellow);
+}
+
+.card,
+.resource-card {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto;
+	gap: 1rem;
+	margin: 1rem 0;
+	padding: 1rem;
+	border: 1px solid var(--defaultBlack);
+	text-align: center;
+}
+
+.card-title {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-row: auto;
+    gap: 1rem;
+}
+
+.content img {
+	width: 150px;
+	height: auto;
+	margin: .5rem;
+	border: 10px solid var(--defaultBlack);
+}
+
+.card {
+	grid-row: 2;
+}
+
+
+.resource-card {
+	margin-left: 1rem;
+}
