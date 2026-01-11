@@ -141,6 +141,7 @@ footer {
 
 .resource-card {
     grid-column: 2;
+    text-align: left;
 }
 
 .about-card .about-content {
@@ -155,10 +156,6 @@ footer {
     width: 150px;
     border-radius: 10px;
     border: 6px solid var(--defaultBlack);
-}
-
-.resource-card {
-    text-align: left;
 }
 
 .resource-card .resource-list {
