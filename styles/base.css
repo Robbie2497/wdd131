@@ -1,9 +1,7 @@
 :root {
     --defaultBlack: #000;
     --defaultWhite: #fff;
-    --defaultBlue: #1d4d72;
-    --defaultYellow: #fcee4f;
-
+    --defaultBlue: #002E5D;
     --defaultBorder: 1px solid var(--defaultBlack);
 }
 
@@ -98,7 +96,7 @@ footer {
 }
 
 #last-modified {
-    color: var(--defaultYellow);
+    color: yellow;
 }
 
 .card {
