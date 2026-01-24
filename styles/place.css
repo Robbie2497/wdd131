@@ -210,6 +210,10 @@ footer .last-modified {
         text-align: left;
     }
 
+    .weather-container h2::after {
+        background-image: url("images/weather.svg");
+    }
+
     .weather-container img {
         position: absolute;
         bottom: 9.3rem;
