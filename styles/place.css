@@ -201,30 +201,29 @@ footer .last-modified {
     }
 
     .weather-container h2 {
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        width: 100%;
+        padding: .25rem;
+        gap: .25rem;
         position: relative;
         bottom: 1.5rem;
         right: 1.5rem;
-        padding: .5rem;
         background-color: rgba(83, 91, 90, .8);
         color: var(--defaultWhite);
         text-align: left;
     }
 
     .weather-container h2::after {
-        background-image: url("images/weather.svg");
+        content: '⛅';
     }
 
     .weather-container img {
-        position: absolute;
-        bottom: 9.3rem;
-        left: 4rem;
-        right: 1.5rem;
+        display: none;
     }
 
     footer {
         margin: 0;
     }
-
-
-
 }
