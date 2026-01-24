@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 131 — W03 Assignment — Country Page</title>
+    <meta name="description" content="Country page assignment for week 3. A page about Scotland.">
+    <meta name="author" content="Robert McGrew">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>SCOTLAND</h1>
+</header>
+<main>
+    <section class="hero">
+        <div class="green-space"></div>
+        <picture>
+            <source media="(max-width: 599px)" srcset="images/scotland-xs.webp">
+            <source media="(max-width: 899px)" srcset="images/scotland-sm.webp">
+            <source media="(max-width: 1199px)" srcset="images/scotland-md.webp">
+            <img src="images/scotland-lg.webp" alt="Picture of Scotland">
+        </picture>
+    </section>
+    <div class="grey-space"></div>
+    <div class="data-container">
+        <h2>Data</h2>
+        <dl>
+            <dt>Area:</dt>
+            <dd>78,782 sq km</dd>
+            <dt>Population:</dt>
+            <dd>5,500,000</dd>
+            <dt>Capital:</dt>
+            <dd>Edinburgh</dd>
+
+            <dt>Languages:</dt>
+            <dd>English</dd>
+
+            <dt>Currency:</dt>
+            <dd>Pound Sterling</dd>
+
+            <dt>Time Zone:</dt>
+            <dd>GMT</dd>
+
+            <dt>Calling Code:</dt>
+            <dd>+44</dd>
+
+            <dt>Internet TLD:</dt>
+            <dd>Scot</dd>
+
+        </dl>
+    </div>
+    <div class="weather-container">
+        <h2>Weather</h2>
+        <img src="images/weather.svg" alt="Weather icon" class="weather-icon-mobile">
+        <dl>
+            <dt>Temperature:</dt>
+            <dd>42°F</dd>
+            <dt>Conditions:</dt>
+            <dd>Cloudy</dd>
+            <dt>Wind:</dt>
+            <dd>16 mph</dd>
+            <dt>Wind Chill:</dt>
+            <dd>4 Bft</dd>
+        </dl>
+    </div>
+</main>
+<footer>
+    <p class="info"><span id="current-year"></span> Robert McGrew 💻 | <img src="images/scotland-flag.png"
+                                                              alt="Scotland flag icon"> Scotland <img
+            src="images/scotland-flag.png" alt="Scotland flag icon"></p>
+    <p class="last-modified">Last Modification: <span id="last-modified"></span></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,224 @@
+:root {
+    --defaultBlue: #005EBB;
+    --defaultWhite: #fff;
+    --greenSpace: #51532b;
+    --greySpace: #535b5a
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    font-family: "Roboto", sans-serif;
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: var(--defaultBlue);
+    color: var(--defaultWhite);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: var(--defaultBlue);
+    color: var(--defaultWhite);
+}
+
+footer .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .info img {
+    background-color: black;
+    padding: 0.1rem;
+    margin: 0 .25rem;
+}
+
+footer .last-modified {
+    display: flex;
+    justify-content: center;
+}
+
+/* CLASSES */
+.green-space {
+    background-color: var(--greenSpace);
+    height: 1.3rem;
+    width: 100%;
+}
+
+.grey-space {
+    background-color: gray;
+    height: 0.5rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    max-height: 45rem;
+
+}
+
+.data-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+}
+
+.data-container h2 {
+    grid-row: 1;
+    text-align: center;
+    margin: 1rem;
+}
+
+.data-container dl {
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-bottom: .25rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.data-container dl dt {
+    grid-column: 1;
+    text-align: right;
+}
+
+.data-container dl dd {
+    grid-column: 2;
+    text-align: left;
+}
+
+.weather-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    padding-top: 1rem;
+}
+
+.weather-container h2 {
+    grid-row: 1;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.weather-container img {
+    grid-row: 2;
+    justify-self: center;
+    padding: 1rem;
+}
+
+.weather-container dl {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-bottom: .25rem;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.weather-container dl dt {
+    grid-column: 1;
+    text-align: right;
+}
+
+.weather-container dl dd {
+    grid-column: 2;
+    text-align: left;
+}
+
+@media screen and (min-width: 899px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .hero {
+        grid-column: 1;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .grey-space {
+        grid-column: 1;
+    }
+
+    .data-container {
+        position: absolute;
+        left: 5rem;
+        top: 15rem;
+        background-color: rgba(255, 255, 255, .75);
+    }
+
+    .data-container h2 {
+        position: relative;
+        right: 1.5rem;
+        padding: .5rem;
+        background-color: rgba(83, 91, 90, .8);
+        color: var(--defaultWhite);
+        text-align: left;
+    }
+
+    .weather-container {
+        position: absolute;
+        right: 5rem;
+        bottom: 15rem;
+        background-color: rgba(255, 255, 255, .75);
+    }
+
+    .weather-container h2 {
+        position: relative;
+        right: 1.5rem;
+        bottom: 1.5rem;
+        padding: .5rem;
+        background-color: rgba(83, 91, 90, .8);
+        color: var(--defaultWhite);
+        text-align: left;
+    }
+
+    .weather-container img {
+        position: absolute;
+        bottom: 8.5rem;
+        left: 4rem;
+        right: 1.5rem;
+    }
+
+    footer {
+        margin: 0;
+    }
+
+
+
+}
