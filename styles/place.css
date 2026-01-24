@@ -1,6 +1,6 @@
 :root {
-    --defaultBlue: #005EBB;
-    --defaultWhite: #fff;
+    --defaultBlue: #003EBB;
+    --defaultWhite: #F5F7FA;
     --greenSpace: #51532b;
     --greySpace: #535b5a
 }
@@ -187,7 +187,7 @@ footer .last-modified {
         bottom: 1.5rem;
         right: 2.5rem;
         padding: .5rem;
-        background-color: rgba(83, 91, 90, .8);
+        background-color: rgba(80, 88, 87, .8);
         color: var(--defaultWhite);
         text-align: left;
     }
