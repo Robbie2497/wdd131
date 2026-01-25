@@ -22,7 +22,7 @@ if (temp <= 10 && windspeed > 4.8) {
     dt.classList = 'weather-data-label';
     dd.classList = 'weather-data-item';
     dt.textContent = 'Wind Chill:';
-    dd.textContent = `${tempC.toFixed(2)}`;
+    dd.textContent = `${tempC.toFixed(2)}℃`;
     weatherList.appendChild(dt);
     weatherList.appendChild(dd);
 } else {
