@@ -143,12 +143,12 @@ footer .last-modified {
     gap: 1rem;
 }
 
-.weather-container dl dt {
+.weather-data-label {
     grid-column: 1;
     text-align: right;
 }
 
-.weather-container dl dd {
+.weather-data-item {
     grid-column: 2;
     text-align: left;
 }
