@@ -1,0 +1,50 @@
+:root {
+    --defaultBlack: #000;
+    --defaultWhite: #fff;
+    --lightGray: #bbb;
+    --darkGray: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--defaultBlack);
+}
+
+caption {
+    caption-side: bottom;
+}
+
+th {
+    padding: 1rem;
+    background-color: var(--defaultBlack);
+    color: var(--defaultWhite);
+    text-align: center;
+}
+
+tr .other-headings {
+    background-color: var(--darkGray);
+}
+
+td {
+    padding: 1rem 2rem;
+    text-align: center;
+    border: 1px solid var(--darkGray);
+}
+
+tr:nth-child(even) {
+    background-color: var(--lightGray);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 20rem;
+}
+
