@@ -1,6 +1,6 @@
 :root {
     --primaryColor: #000;
-    --secondaryColor: #8157b5;
+    --secondaryColor: #643296;
     --accentColor: #C784AC;
     --defaultBlack: #000;
     --defaultWhite: #fff;
@@ -170,7 +170,7 @@ footer p {
 
 .temple-card span {
     font-variant: small-caps;
-    color: var(--accentColor);
+    color: var(--secondaryColor);
     letter-spacing: 1px;
 }
 

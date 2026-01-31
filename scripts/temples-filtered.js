@@ -158,7 +158,7 @@ function createTempleCard(filteredTemples) {
     templeContainer.innerHTML = '';
     filteredTemples.forEach((temple) => {
         const card = document.createElement('section');
-        const name = document.createElement('h3');
+        const name = document.createElement('h2');
         const location = document.createElement('p');
         const dedication = document.createElement('p');
         const area = document.createElement('p');
