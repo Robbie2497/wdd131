@@ -22,4 +22,3 @@ navItem.forEach((item) => {
         }
     });
 });
-
