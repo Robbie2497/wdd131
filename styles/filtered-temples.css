@@ -160,7 +160,6 @@ footer p {
     transform: translate(-10px, -5px);
     border: 1px solid var(--defaultBlack);
     box-shadow: 0 4px 12px var(--accentColor);
-    cursor: pointer;
 }
 
 .temple-card h2 {
