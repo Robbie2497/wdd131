@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Activity</title>
+    <meta name="description" content="This is the Product Review Form activity for week 5.">
+    <meta name="author" content="Robert McGrew">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+<header>
+    <h1>Product Review</h1>
+</header>
+
+<main>
+    <form method="get" action="review.html">
+        <fieldset class="product-select">
+            <div class="form-group">
+                <label for="products">Product Name
+                    <select name="products" id="products" required>
+                        <option value="0" disabled selected>Select a Product...</option>
+                    </select>
+                </label>
+            </div>
+
+            <legend class="rating">Overall Rating</legend>
+            <div class="form-group">
+                <label><input type="radio" name="rating" value="1"> &star;</label>
+            </div>
+            <div class="form-group">
+                <label><input type="radio" name="rating" value="2"> &star;&star;</label>
+            </div>
+            <div class="form-group">
+                <label><input type="radio" name="rating" value="3"> &star;&star;&star;</label>
+            </div>
+            <div class="form-group">
+                <label><input type="radio" name="rating" value="4"> &star;&star;&star;&star;</label>
+            </div>
+            <div class="form-group">
+                <label><input type="radio" name="rating" value="5"> &star;&star;&star;&star;&star;</label>
+            </div>
+            <div class="form-group">
+
+                <label>Date of Installation<input type="date" name="completeDate"></label>
+            </div>
+
+            <legend>Overall Rating</legend>
+            <div class="form-group">
+
+                <label><input type="checkbox" name="durability" value="durability"> Durability</label>
+            </div>
+            <div class="form-group">
+
+                <label><input type="checkbox" name="ease" value="ease"> Ease of Use</label>
+            </div>
+            <div class="form-group">
+                <label><input type="checkbox" name="performace" value="performace"> Performance</label>
+            </div>
+            <div class="form-group">
+                <label><input type="checkbox" name="design" value="design"> Design</label>
+            </div>
+            <div class="form-group">
+
+                <label>Written Review<span class="optional">(Optional)</span><textarea name="written-review"></textarea></label>
+            </div>
+            <div class="form-group">
+                <label>Your Name<span class="optional">(Optional)</span><input type="text" name="users-name"></label>
+            </div>
+        </fieldset>
+
+        <input type="submit" value="Post Review">
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 💻 <span id="currentYear"></span> Robert McGrew 💻</p>
+    <p>United States</p>
+    <p id="lastModified"></p>
+</footer>
+</body>
+
+</html>

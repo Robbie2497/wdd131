@@ -1,0 +1,29 @@
+:root {
+    --defaultBlack: #000;
+    --defaultWhite: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    /*padding: 1rem;*/
+    background-color: var(--defaultBlack);
+    color: var(--defaultWhite);
+}
+
+
+
