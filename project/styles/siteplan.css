@@ -170,6 +170,14 @@ footer {
 }
 
 @media screen and (min-width: 900px) {
+    figure .desktop {
+        grid-column: 1;
+    }
+
+    figure .mobile {
+        grid-column: 2;
+    }
+
     .intro {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -205,5 +213,9 @@ footer {
 
     .wireframe-container {
         margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 1rem;
     }
 }
