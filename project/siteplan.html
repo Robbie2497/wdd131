@@ -14,7 +14,7 @@
 <body>
 
 <header>
-    <a href="#"><img class="logo" src="images/logo.png" alt="Company logo"></a>
+    <a href="#"><img class="logo" src="images/logo.png" alt="Company logo" loading="lazy"></a>
     <h1 class="company-name">Print Craft</h1>
     <nav>
         <ul>
@@ -26,32 +26,36 @@
 </header>
 
 <main>
-    <div class="main-container">
         <section class="intro">
-            <div class="content-heading">
+            <div id="overlay">
                 <h2>What is 3D Printing?</h2>
+                <div class="learn-more">
+                    <p class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore pariatur optio officia beatae
+                        dolorem similique! Necessitatibus qui dolore sapiente facilis, aut nulla veritatis consequuntur
+                        maxime fugit, ad quaerat est quasi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore pariatur optio officia beatae
+                        dolorem similique! Necessitatibus qui dolore sapiente facilis, aut nulla veritatis consequuntur
+                        maxime fugit, ad quaerat est quasi.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore pariatur optio officia beatae
+                        dolorem similique! Necessitatibus qui dolore sapiente facilis, aut nulla veritatis consequuntur
+                        maxime fugit, ad quaerat est quasi.
+                    </p>
+                    <button id="learn-more-btn">Learn More</button>
+                </div>
             </div>
-            <img id="home-gif" src="images/printing.gif" alt="Image of something being 3d printed">
-            <p class="content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore pariatur optio officia beatae
-                dolorem similique! Necessitatibus qui dolore sapiente facilis, aut nulla veritatis consequuntur
-                maxime fugit, ad quaerat est quasi.
-            </p>
-            <div class="learn-more-btn-container">
-                <button class="learn-more-btn">Learn More!</button>
-            </div>
-        </section>
+            <img id="home-gif" src="images/printing.gif" alt="Image of something being 3d printed" loading="lazy">
+            </section>
         <div class="wireframe-container">
             <figure class="desktop">
                 <figcaption>Desktop Wireframe</figcaption>
-                <img src="images/desktop-wireframe.png" alt="Wireframe for desktop view">
+                <img src="images/desktop-wireframe.png" alt="Wireframe for desktop view" loading="lazy">
             </figure>
             <figure class="mobile">
                 <figcaption>Mobile Wireframe</figcaption>
-                <img src="images/mobile-wireframe.png" alt="Wireframe for mobile view">
+                <img src="images/mobile-wireframe.png" alt="Wireframe for mobile view" loading="lazy">
             </figure>
         </div>
-    </div>
 </main>
 
 <footer>

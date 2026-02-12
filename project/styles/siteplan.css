@@ -1,6 +1,16 @@
 :root {
+    /* Colors */
     --defaultBlack: #000;
     --defaultWhite: #FFFFFF;
+    --primaryColor: #2e4479;
+    --secondaryColor: #7b9eff;
+
+    /* Utils */
+    --defaultBorder: solid 1px rgba(0, 0, 0, 1);
+    --defaultBorderRadius: 8px;
+    --secondaryBorderRadius: 8px 8px 0 0;
+    --primaryOverlay: rgba(0, 0, 0, 0.7);
+    --secondaryOverlay: rgba(180, 180, 180, 0.15);
 }
 
 * {
@@ -14,16 +24,186 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    /*padding: 1rem;*/
-    background-color: var(--defaultBlack);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--primaryColor);
     color: var(--defaultWhite);
 }
 
+header h1 {
+    justify-self: center;
+    text-align: center;
+}
 
+nav {
+    justify-self:  end;
+}
 
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li:hover {
+    background-color: var(--secondaryColor);
+    border-radius: var(--defaultBorderRadius);
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    background-color: var(--secondaryColor);
+    color: var(--defaultBlack);
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--defaultBorderRadius);
+    color: var(--defaultWhite);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main figure img {
+    width: 100%;
+    height: auto;
+}
+
+main figure figcaption {
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.15);
+    margin-top: 1rem;
+    border-bottom: var(--defaultBorder);
+    border-radius: var(--secondaryBorderRadius);
+}
+
+footer {
+    margin-top: 5rem;
+    padding: 3rem;
+    text-align: center;
+    background-color: var(--primaryColor);
+    color: var(--defaultWhite);
+    border-radius: var(--secondaryBorderRadius);
+}
+
+/* Classes */
+.logo {
+    height: 65px;
+    width: auto;
+}
+
+.intro {
+    display: grid;
+    position: relative;
+    align-items: stretch;
+}
+
+.learn-more {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr auto;
+    background-color: var(--secondaryOverlay);
+    border-radius: var(--defaultBorderRadius);
+    padding: 0.75rem;
+    margin: 1rem;
+    text-align: left;
+}
+
+.content {
+    line-height: 1.4;
+}
+
+/* Ids */
+#home-gif {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--primaryOverlay);
+    color: var(--defaultWhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+#overlay h2 {
+    margin-top: 2rem;
+    /*padding-bottom: 1rem;*/
+}
+
+#learn-more-btn {
+    margin: 0.5rem 0 0 0;
+    padding: 0.75rem;
+    grid-column: 2;
+    grid-row: 2;
+    background-color: var(--secondaryColor);
+    border-radius: var(--defaultBorderRadius);
+}
+
+@media screen and (min-width: 900px) {
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 3rem;
+        position: static;
+    }
+
+    #overlay {
+        position: static;
+        inset: auto;
+        background-color: transparent;
+        color: var(--defaultBlack);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        padding: 0;
+    }
+
+    .learn-more {
+        margin: 0;
+        background-color: var(--secondaryOverlay);
+        max-width: 500px;
+    }
+
+    #home-gif {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .wireframe-container {
+        margin-top: 4rem;
+    }
+}
