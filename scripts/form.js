@@ -1,3 +1,5 @@
+// noinspection SpellCheckingInspection
+
 const currentYear = document.querySelector('#currentYear');
 const lastModified = document.querySelector('#lastModified');
 const productSelect = document.querySelector('#products');
@@ -30,7 +32,7 @@ const products = [
 ];
 if (currentYear) {
     const current = new Date();
-    currentYear.textContent = current.getFullYear();
+    currentYear.textContent = current.getFullYear().toString();
 }
 
 if (lastModified) {

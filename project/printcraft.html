@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 — Website Project — Robert McGrew</title>
+    <meta name="author" content="Robert McGrew">
+    <meta name="description" content="This is the week 6 project website assignment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="styles/printcraft.css">
+    <script src="scripts/printcraft.js" defer></script>
+</head>
+<body>
+
+<header>
+    <a href="printcraft.html"><img class="logo" src="images/logo.png" alt="Company logo" loading="lazy"></a>
+    <h1 class="company-name">Print Craft</h1>
+    <nav>
+        <ul>
+            <li><a class="active" href="printcraft.html">Home</a></li>
+            <li><a href="showcase.html">Showcase</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="intro">
+        <div id="overlay">
+            <h2>What is 3D Printing?</h2>
+            <div class="learn-more">
+                <ul class="content">
+                    <li><p><span class="subject">Materials:</span> PLA, PETG, ABS, Nylon, Metal, and more!</p></li>
+                    <li><p><span class="subject">Processes:</span> Bring your ideas to life layer by layer from a digital design.</p></li>
+                    <li><p><span class="subject">Types:</span> FDM, SLA, SLS, DMLS, and more! </p></li>
+                    <li><p><span class="subject">Use-Cases:</span> Prototyping, prosthetics, hobbies, and wherever else your imagination takes you.</p></li>
+<!--
+TODO -> Need to come up with another idea point <li>  </li>
+For the different material types ->
+    PLA: Used for prototyping and other less durable products.
+    PETG: Used for high-strength, UV resistance, and moisture resistant products. <span class="required-red">*</span>
+    ABS: Used for high-strength, flexable, and thermal resistant products. <span class="required-red">*</span>
+    Nylon: Used for higher-strength, flexable, chemical resistant products. <span class="required-red">*</span>
+    Metal: Used for highest-strength metal products. <span class="required-red">**</span>
+-->
+                </ul>
+                <button id="learn-more-btn">Learn More</button>
+            </div>
+        </div>
+        <img id="home-gif" src="images/printing.gif" alt="Image of something being 3d printed" loading="lazy">
+    </section>
+
+    <section class="how-it-works">
+        <h2>How 3D printing works</h2>
+        <div class="card-container card-container-1">
+            <article class="info-card">
+                <h3>Design</h3>
+                <p>Create or download a 3D model using CAD software or a model library.</p>
+            </article>
+            <article class="info-card">
+                <h3>Slice</h3>
+                <p>Slicing software converts the model into layers and generates the instructions for the printer.</p>
+            </article>
+            <article class="info-card">
+                <h3>Print</h3>
+                <p>The printer builds the object layer-by-layer using the materials provided.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="featured-prints">
+        <div class="featured-header">
+            <h2>Featured Prints</h2>
+            <a href="showcase.html" class="text-link">View Full Gallery -></a>
+        </div>
+
+        <div class="card-container card-container-1">
+            <article class="model-card">
+                <img src="" alt="" loading="lazy">
+                <div class="model-card-body">
+                    <h3></h3>
+                    <p class="data"></p>
+                    <p>What is it and why is it cool?</p>
+                    <a href="" class="button-link">View in Showcase</a>
+                </div>
+            </article>
+
+            <article class="model-card">
+                <img src="" alt="" loading="lazy">
+                <div class="model-card-body">
+                    <h3></h3>
+                    <p class="data"></p>
+                    <p>What is it and why is it cool?</p>
+                    <a href="" class="button-link">View in Showcase</a>
+                </div>
+            </article>
+
+            <article class="model-card">
+                <img src="" alt="" loading="lazy">
+                <div class="model-card-body">
+                    <h3></h3>
+                    <p class="data"></p>
+                    <p>What is it and why is it cool?</p>
+                    <a href="" class="button-link">View in Showcase</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="current-year"></span> 💻 Robert McGrew 💻</p>
+    <p id="last-modified"></p>
+</footer>
+
+</body>
+</html>

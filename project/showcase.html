@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 — Website Project — Robert McGrew</title>
+    <meta name="author" content="Robert McGrew">
+    <meta name="description" content="This is the week 6 project website assignment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="styles/printcraft.css">
+    <script src="scripts/printcraft.js" defer></script>
+    <script src="scripts/showcase.js" defer></script>
+</head>
+<body>
+
+<header>
+    <a href="printcraft.html"><img class="logo" src="images/logo.png" alt="Company logo" loading="lazy"></a>
+    <h1 class="company-name">Print Craft</h1>
+    <nav>
+        <ul>
+            <li><a href="printcraft.html">Home</a></li>
+            <li><a class="active" href="showcase.html">Showcase</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="showcase">
+        <div class="hero">
+            <h2>Showcase</h2>
+            <p>Explore a mix of prints and examples that highlight what 3D printing can do.</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active-btn" id="filter-all">All</button>
+            <button class="filter-btn" id="filter-name-asc">Name (A - Z)</button>
+            <button class="filter-btn" id="filter-name-desc">Name (Z - A)</button>
+            <label for="filter-category" aria-hidden="true"></label>
+            <select class="filter-btn" id="filter-category" name="category">
+                <option value="0">Category</option>
+                <option value="1">Functional</option>
+                <option value="2">Accessories</option>
+                <option value="3">Decor</option>
+                <option value="4">Toys/Fidgets</option>
+            </select>
+            <label for="filter-filament-type" aria-hidden="true"></label>
+            <select class="filter-btn" id="filter-filament-type" name="filament-type">
+                <option value="0">Filament Type</option>
+                <option value="1">PLA</option>
+                <option value="2">PETG</option>
+                <option value="3">Resin</option>
+            </select>
+            <button class="filter-btn" id="filter-favorites">Favorites</button>
+        </div>
+
+        <div class="card-container" id="model-container">
+            <!-- Content generated in printcraft.js -->
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="current-year"></span> 💻 Robert McGrew 💻</p>
+    <p id="last-modified"></p>
+</footer>
+
+</body>
+</html>

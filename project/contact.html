@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 — Website Project Contact Page — Robert McGrew</title>
+    <meta name="author" content="Robert McGrew">
+    <meta name="description" content="This is the contact page for the week 6 project website assignment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <link rel="stylesheet" href="styles/printcraft.css">
+<!--    <script src="scripts/printcraft.js"></script>-->
+</head>
+<body>
+
+<header>
+    <a href="printcraft.html"><img class="logo" src="images/logo.png" alt="Company logo" loading="lazy"></a>
+    <h1 class="company-name">Print Craft</h1>
+    <nav>
+        <ul>
+            <li><a href="printcraft.html">Home</a></li>
+            <li><a href="showcase.html">Showcase</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="contact-form-container">
+        <form action="#">
+            <fieldset>
+                <h1>Contact Us</h1>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5"></textarea>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="subscribe_yn" id="subscribe_yn">
+                    <label for="subscribe_yn">Receive more info?</label>
+                </div>
+                <div class="submit-btn-container">
+                    <button class="submit-btn" type="submit">Send My Inquiry</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div class="file-info">
+        <p>&copy; <span id="current-year"></span> 💻 Robert McGrew 💻</p>
+        <p id="last-modified"></p>
+    </div>
+</footer>
+
+</body>
+</html>
