@@ -129,7 +129,6 @@ favoriteBtns.forEach((btn) => {
         productFilamentType.innerHTML = `${filamentType}`;
         productCategory.innerHTML = `${category}`;
         productDescription.innerHTML = `<textarea>${description}</textarea>`;
-        favoriteBtn.innerHTML = `<button id="favorite-btn" class="favorite-btn" data-id="${id}">${isFavorite(id) ? }</button>`;
 
         productDataList.push(id, name, filamentType, category, description);
         productCard.push(productDataList);

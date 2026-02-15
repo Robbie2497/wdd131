@@ -47,9 +47,18 @@ main {
     margin-top: 1rem;
 }
 
+select,
+input {
+    border: none;
+    padding: 0.25rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--defaultBorderRadius);
+}
+
 textarea {
     resize: vertical;
     min-height: 7rem;
+    border-radius: var(--defaultBorderRadius);
 }
 
 footer {
@@ -152,7 +161,8 @@ footer p {
     flex-direction: row;
     align-items: center;
     gap: 0.3rem;
-    font-size: 0.95rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.25rem;
 }
 
 .stars {
@@ -168,9 +178,11 @@ footer p {
 }
 
 .submit-btn {
-    margin: 1rem;
+    display: block;
+    margin-top: 1.5rem;
     width: 100%;
     padding: 0.8rem 1rem;
+    border-radius: var(--defaultBorderRadius);
     background-color: var(--primaryBtnBg);
     color: var(--defaultBlack);
     font-weight: 700;
@@ -179,7 +191,14 @@ footer p {
 }
 
 .submit-btn:hover {
-    background-color: var(--secondaryBgColor);
+    background-color: var(--primaryBgColor);
+    color: var(--defaultWhite);
+    transform: translate(-2px, -2px);
+    box-shadow: 2px 2px 2px 2px var(--defaultBlack);
+}
+
+.required-red {
+    color: red;
 }
 
 .more {
@@ -193,6 +212,19 @@ footer p {
     border-radius: var(--defaultBorderRadius);
     background-color: var(--primaryBgColor);
     color: var(--defaultWhite);
+}
+
+/********** IDs **********/
+#submitter-name {
+    margin-top: 0.5rem;
+}
+
+#name-error-wrapper {
+    padding: 0.5rem;
+}
+
+#date-error-wrapper {
+    padding-bottom: 0.5rem;
 }
 
 /********** Media Queries **********/
