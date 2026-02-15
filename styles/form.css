@@ -7,7 +7,7 @@
     --primaryBtnBg: #f6f2f7;
     --secondaryBtnBg: #aca6ae;
     --btnBorder: #333;
-    --requiredRed: #c62828;
+    --requiredRed: #800202;
     --defaultBorder: 1px solid #999;
     --defaultShadow: 0 0 10px rgba(0, 0, 0, 0.15);
     --defaultBorderRadius: 10px;
@@ -198,7 +198,7 @@ footer p {
 }
 
 .required-red {
-    color: red;
+    color: var(--requiredRed);
 }
 
 .more {
