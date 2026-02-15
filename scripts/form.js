@@ -4,7 +4,6 @@ const dateErrorWrapper = document.getElementById('date-error-wrapper') || '';
 const currentYear = document.querySelector('#currentYear');
 const lastModified = document.querySelector('#lastModified');
 const productSelect = document.querySelector('#products');
-const ratingSelects = document.querySelectorAll('.rating-input');
 const products = [
     {
         id: "fc-1888",
@@ -71,13 +70,9 @@ const clearErrors = (errs) => {
 }
 
 // Event Listeners
-ratingSelects.forEach((select) => {
-    const ratingValue = select.value;
-});
-
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    clearErrors(errs = [nameErrorWrapper, dateErrorWrapper]);
+    clearErrors([nameErrorWrapper, dateErrorWrapper]);
     const id = document.getElementById('products');
     let selectedId = id.options['selectedIndex'] - 1;
     if (selectedId === -1) {
@@ -113,9 +108,8 @@ submitBtn.addEventListener('click', (e) => {
         review: review,
         submitterName: submitterName,
     };
-
-    const reviewNumber = Number(getLocalStorage(`Review #${localStorage.length}`)) + 1 || 1;
-    console.log(`Review #${reviewNumber}`, reviewData);
-    setLocalStorage(`Review #${reviewNumber}`, reviewData);
+    const c = Number(getLocalStorage('"review-count"')) + 1 ?? 1;
+    setLocalStorage(`review-count`, c);
+    setLocalStorage(`Review #${c}`, reviewData);
     window.location = 'review.html';
 });

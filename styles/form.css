@@ -207,7 +207,7 @@ footer p {
 }
 
 .more a {
-    padding: 0.15rem;
+    padding: 0.25rem;
     text-decoration: none;
     border-radius: var(--defaultBorderRadius);
     background-color: var(--primaryBgColor);
