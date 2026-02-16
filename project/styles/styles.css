@@ -89,6 +89,10 @@ main {
     flex-direction: column;
 }
 
+select:focus {
+    outline: none;
+}
+
 main figure img {
     width: 100%;
     height: auto;
@@ -309,6 +313,7 @@ footer p {
 }
 
 .filter-btn,
+.favorites-btn,
 .filter-select {
     padding: 0.5rem;
     border-radius: var(--defaultBorderRadius);
@@ -322,8 +327,14 @@ filter-select:hover {
 }
 
 .filter-btn.active-btn,
-.filter-select.active-btn {
+.filter-select.active-select {
     background-color: var(--secondaryColor);
+    color: var(--defaultWhite);
+}
+
+.active-select option {
+    background-color: var(--defaultWhite);
+    color: var(--defaultBlack);
 }
 
 .featured-header {

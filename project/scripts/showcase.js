@@ -21,7 +21,7 @@ const productsArry = [
             name: 'PETG',
         },
         category: {
-            id: 2,
+            id: 1,
             name: 'Functional',
         },
         description: 'Set of 3D‑printed cable clips in four different sizes. These clips bundle and organize cables of varying thicknesses and lengths, wrapping them into neat coils and preventing tangling—perfect for keeping both thin and thick cables tidy:contentReference[oaicite:1]{index=1}.',
@@ -31,11 +31,11 @@ const productsArry = [
         id: '3',
         name: 'Succulent Planter',
         filamentType: {
-            id: 3,
+            id: 1,
             name: 'PLA',
         },
         category: {
-            id: 3,
+            id: 2,
             name: 'Decor',
         },
         description: 'Modern geometric plant pot with an inner pot and drainage holes. The inside pot (about 60–65 mm wide and 60 mm tall) has holes so excess water can drain, making it ideal for small succulents or cactus. Its faceted exterior gives the piece a contemporary look:contentReference[oaicite:2]{index=2}.',
@@ -45,11 +45,11 @@ const productsArry = [
         id: '4',
         name: 'Articulated Flexi Dragon',
         filamentType: {
-            id: 4,
+            id: 1,
             name: 'PLA',
         },
         category: {
-            id: 4,
+            id: 3,
             name: 'Toy/Fidget',
         },
         description: 'Fully articulated print‑in‑place dragon. Linked segments allow the dragon to move freely right off the print bed—no assembly required. The finished model is about 55 cm long and can be posed. Recommended print settings include two walls, 15% infill and a 0.15 mm layer height:contentReference[oaicite:3]{index=3}.',
@@ -59,11 +59,11 @@ const productsArry = [
         id: '5',
         name: 'Infinity Cube Fidget',
         filamentType: {
-            id: 5,
+            id: 1,
             name: 'PLA',
         },
         category: {
-            id: 5,
+            id: 3,
             name: 'Toy/Fidget',
         },
         description: 'Set of three infinity cubes (curved‑edge, straight‑edge and indented designs). Each cube prints in place with low‑tolerance joints that require gentle breaking in; once freed, the joints move smoothly. Designed to be printed without supports at a 0.2 mm layer height and 15% infill (increase infill for a heavier feel):contentReference[oaicite:4]{index=4}.',
@@ -73,11 +73,11 @@ const productsArry = [
         id: '6',
         name: 'Controller Wall Mount',
         filamentType: {
-            id: 6,
+            id: 2,
             name: 'PETG',
         },
         category: {
-            id: 6,
+            id: 4,
             name: 'Accessories',
         },
         description: 'Wall‑mounted holder that keeps your desk clear by storing an Xbox One, Nintendo Switch Pro or Steam controller—and even a phone—in a secure cradle. A screw hole lets you mount it with a wood screw, but it can also be attached with command strips or double‑sided tape. Suggested print settings use 15% infill; the finished mount weighs about 35 grams and prints in roughly 3.75 hours:contentReference[oaicite:5]{index=5}.',
@@ -87,11 +87,11 @@ const productsArry = [
         id: '7',
         name: 'Desk Organizer Tray',
         filamentType: {
-            id: 7,
+            id: 2,
             name: 'PETG',
         },
         category: {
-            id: 7,
+            id: 1,
             name: 'Functional',
         },
         description: '3D‑printed organizer tray with multiple compartments for pens, paper clips and other small essentials. Its sleek, durable and compact design keeps your workspace tidy. Recommended print settings are a 0.2 mm layer height, two outer wall loops and 15% infill:contentReference[oaicite:6]{index=6}:contentReference[oaicite:7]{index=7}.',
@@ -101,11 +101,11 @@ const productsArry = [
         id: '8',
         name: 'Lithophane Night Light Panel',
         filamentType: {
-            id: 8,
+            id: 1,
             name: 'PLA',
         },
         category: {
-            id: 8,
+            id: 2,
             name: 'Decor',
         },
         description: 'Customizable lithophane night light that turns your favourite photo into a glowing panel. Precision 3D printing creates a 3D illusion from your image; choose black‑and‑white or colour options. The light comes with a manual on/off switch and LED bulb and is marketed as a power‑saving, fully customizable gift:contentReference[oaicite:8]{index=8}.',
@@ -115,11 +115,11 @@ const productsArry = [
         id: '9',
         name: 'Keychain Name Tag',
         filamentType: {
-            id: 9,
+            id: 1,
             name: 'PLA',
         },
         category: {
-            id: 9,
+            id: 4,
             name: 'Accessories',
         },
         description: 'Personalized 3D‑printed name tag keychain. Produced in PLA (often recycled) or PETG and supplied with a key ring and chain. Buyers can choose the colour and ring orientation (front or back) and enter a name up to nine characters. Each piece is unique; letters are about 1.2 cm tall (e.g., “Jenny” is roughly 7 cm long). Painted versions are lacquered for durability:contentReference[oaicite:9]{index=9}:contentReference[oaicite:10]{index=10}.',
@@ -129,11 +129,11 @@ const productsArry = [
         id: '10',
         name: 'Mini Resin Figurine Bust',
         filamentType: {
-            id: 10,
+            id: 3,
             name: 'Resin',
         },
         category: {
-            id: 10,
+            id: 3,
             name: 'Toy/Fidget',
         },
         description: 'Miniature resin bust depicting a stylized woman wearing a geometric mask. The detailed hair sculpt and textured mask make it ideal for high‑detail resin printing, display or painting practice:contentReference[oaicite:11]{index=11}.',
@@ -143,11 +143,11 @@ const productsArry = [
         id: '11',
         name: 'Mini D&D Figurine (Customizable)',
         filamentType: {
-            id: 11,
+            id: 3,
             name: 'Resin',
         },
         category: {
-            id: 11,
+            id: 3,
             name: 'Toy/Fidget',
         },
         description: 'Custom D&D miniatures printed in high‑detail gray resin. TitanCraft’s creator lets you design heroes, monsters or NPCs by swapping clothing and items, adjusting proportions and poses, and even kitbashing parts to build scenes. Each mini is printed without molds to capture intricate detail and can be shipped to your door or downloaded as an STL file:contentReference[oaicite:12]{index=12}:contentReference[oaicite:13]{index=13}. Printed minis typically ship in about 3–4 weeks in the US (longer internationally):contentReference[oaicite:14]{index=14}.',
@@ -157,30 +157,29 @@ const productsArry = [
         id: '12',
         name: 'Metal Gear Set',
         filamentType: {
-            id: 12,
+            id: 4,
             name: 'Metal',
         },
         category: {
-            id: 12,
-            name: 'Metal',
+            id: 1,
+            name: 'Functional',
         },
         description: 'Planetary (epicyclic) gear set designed for mechanical demonstrations. The model consists of six external gears and one internal gear; it illustrates how epicyclic gearing works. The creator recommends printing in resin for best results, but modifications can be made for ABS or PLA:contentReference[oaicite:15]{index=15}.',
         imageUrl: 'https://dl2.myminifactory.com/object-assets/60a2e63002f8f/images/720X720-planetary-gear-set-type-3-e.jpg'
     },
 ];
+let currentView = [...productsArry];
 const cardContainer = document.getElementById('model-container');
-const allBtn = document.getElementById('filter-all');
-const ascBtn = document.getElementById('filter-name-asc');
-const descBtn = document.getElementById('filter-name-desc');
-const filterBtns = document.querySelectorAll('.filter-btn');
+const filterBtns = document.querySelectorAll('.filter-btns');
+const filterSelect = document.querySelector('.filter-select');
 const filterSelects = document.querySelectorAll('.filter-select');
-
-productsArry.forEach((p) => {
-    console.log(p.category);
-});
+const filterBtnClass = 'filter-btns filter-btn';
+const activeFilterBtnClass = `${filterBtnClass} active-btn`;
+const filterSelectClass = 'filter-select';
+const activeFilterSelectClass = `${filterSelectClass} active-select`;
 
 const renderProductCards = (productCards) => {
-    console.log(productCards);
+    currentView = productCards;
     cardContainer.innerHTML = productCards.map((p) => `
         <article class="model-card">
             <img class="model-card-img" src="${p.imageUrl}" alt="Picture of ${p.name} model" loading="lazy">
@@ -191,44 +190,51 @@ const renderProductCards = (productCards) => {
                         ${isFavorite(p.id) ? '♥' : '♡'} 
                     </button>
                 </div>
-                <p class="data">${p.filamentType} • ${p.category}</p>
+                <p class="data">${p.filamentType.name} • ${p.category.name}</p>
                 <p>${p.description}</p>
             </div>
         </article>`).join('');
     const favoriteBtns = document.querySelectorAll('.favorite-btn');
     favoriteBtns.forEach((btn) => {
         btn.addEventListener('click', (e) => {
-            const id = e.target.dataset.id;
+            const id = e.currentTarget.dataset.id;
             toggleFavorite(id);
+            renderProductCards(currentView);
         });
     });
 };
 
 // Filter Functions
+const changeActiveFilterClass = (filter) => {
+    const activeFilterBtn = document.querySelector('.active-btn');
+    const activeFilterSelect = document.querySelector('.active-select');
+    if (activeFilterSelect) {
+        activeFilterSelect.className = filterSelectClass;
+        activeFilterSelect.selectedIndex = 0;
+    } else if (activeFilterBtn) {
+        activeFilterBtn.className = filterBtnClass;
+    }
+    filterBtns.className = filterBtnClass;
+    filter.className = activeFilterSelectClass;
+};
+
 const filterByNameAsc = () => {
-    return renderProductCards([...productsArry].sort((a, z) => a.name.localeCompare(z.name)));
+    return renderProductCards([...currentView].sort((a, z) => a.name.localeCompare(z.name)));
 };
 
 const filterByNameDesc = () => {
-    return renderProductCards([...productsArry].sort((a, z) => z.name.localeCompare(a.name)));
+    return renderProductCards([...currentView].sort((a, z) => z.name.localeCompare(a.name)));
 };
 
 const filterByCategory = (id) => {
-    let cName = '';
-    console.log(id);
-    productsArry.forEach((p) => {
-        if (p.category.id === id) {
-            cName = p.category.name;
-        }
-    });
-    renderProductCards(productsArry.filter((p) => p.category.name === cName));
+    return renderProductCards(productsArry.filter((p) => p.category.id === Number(id)));
 };
 
 const filterByFilamentType = (id) => {
-    return renderProductCards(productsArry.filter((p) => p.filamentType.id === id));
+    return renderProductCards(productsArry.filter((p) => p.filamentType.id === Number(id)));
 };
 
-const filterByFavorites = (id) => {
+const filterByFavorites = () => {
     const ids = getFavorites();
     const products = productsArry.filter(p => ids.includes(p.id));
     renderProductCards(products);
@@ -243,16 +249,19 @@ const applyFilters = (id) => {
             filterByNameDesc();
             break;
         case ('filter-category'):
-            filterByCategory(id.target.options['selectedIndex']);
+            filterByCategory(id.target.value);
             break;
         case ('filter-filament-type'):
-            filterByFilamentType(id.target.options['selectedIndex']);
+            filterByFilamentType(id.target.value);
             break;
         case ('filter-favorites'):
             filterByFavorites(id);
             break;
-        default:
+        case ('filter-all'):
             renderProductCards(productsArry);
+            break;
+        default:
+            renderProductCards(currentView);
             break;
     }
 };
@@ -263,14 +272,13 @@ const getFavorites = () => {
 };
 
 const setFavorites = (productIds) => {
-    localStorage.setItem('Favorites', JSON.stringify(productIds));
+    localStorage.setItem(`Favorites`, JSON.stringify(productIds));
 };
 
 const toggleFavorite = (id) => {
     const favorites = getFavorites();
     if (favorites.includes(id)) {
         const updatedFavorites = favorites.filter((productId) => productId !== id);
-        console.log(updatedFavorites);
         setFavorites(updatedFavorites);
     } else {
         favorites.push(id);
@@ -285,14 +293,16 @@ const isFavorite = (id) => {
 // Event Listeners
 filterBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
+        changeActiveFilterClass(e.currentTarget);
         applyFilters(e);
     });
 });
 
 filterSelects.forEach((select) => {
     select.addEventListener('change', (e) => {
+        changeActiveFilterClass(e.currentTarget);
         applyFilters(e);
     });
 });
 
-// renderProductCards(productsArry);
+renderProductCards(productsArry);
