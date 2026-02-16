@@ -15,17 +15,17 @@ const productsArry = [
     },
     {
         id: '2',
-        name: 'Cable Clip Set',
+        name: 'Lego Darth Vader',
         filamentType: {
             id: 2,
             name: 'PETG',
         },
         category: {
             id: 1,
-            name: 'Functional',
+            name: 'Toy/Fidget',
         },
-        description: 'Set of 3D‑printed cable clips in four different sizes. These clips bundle and organize cables of varying thicknesses and lengths, wrapping them into neat coils and preventing tangling—perfect for keeping both thin and thick cables tidy:contentReference[oaicite:1]{index=1}.',
-        imageUrl: 'https://media.printables.com/media/prints/126594/images/1216851_f3ff4841-dbdf-4c7f-a028-0a8277b88b74/thumbs/cover/1200x630/jpg/20220129_112444.jpg'
+        description: 'Lego Darth Vader minifig at 10x scale.',
+        imageUrl: 'images/products/lego.webp'
     },
     {
         id: '3',
@@ -171,12 +171,13 @@ const productsArry = [
 let currentView = [...productsArry];
 const cardContainer = document.getElementById('model-container');
 const filterBtns = document.querySelectorAll('.filter-btns');
-const filterSelect = document.querySelector('.filter-select');
 const filterSelects = document.querySelectorAll('.filter-select');
 const filterBtnClass = 'filter-btns filter-btn';
 const activeFilterBtnClass = `${filterBtnClass} active-btn`;
 const filterSelectClass = 'filter-select';
 const activeFilterSelectClass = `${filterSelectClass} active-select`;
+currentYear.textContent = `${today.getFullYear()}`;
+lastModified.textContent = document.lastModified;
 
 const renderProductCards = (productCards) => {
     currentView = productCards;
@@ -208,14 +209,15 @@ const renderProductCards = (productCards) => {
 const changeActiveFilterClass = (filter) => {
     const activeFilterBtn = document.querySelector('.active-btn');
     const activeFilterSelect = document.querySelector('.active-select');
-    if (activeFilterSelect) {
-        activeFilterSelect.className = filterSelectClass;
-        activeFilterSelect.selectedIndex = 0;
-    } else if (activeFilterBtn) {
-        activeFilterBtn.className = filterBtnClass;
+    if (activeFilterBtn) activeFilterBtn.className = filterBtnClass;
+    if (activeFilterSelect) activeFilterSelect.className = filterSelectClass;
+
+    if (filter.classList.contains('filter-btn')) {
+        filterSelects.forEach((s) => s.selectedIndex = 0);
+        filter.className = activeFilterBtnClass;
+    } else if (filter.classList.contains('filter-select')) {
+        filter.className = activeFilterSelectClass;
     }
-    filterBtns.className = filterBtnClass;
-    filter.className = activeFilterSelectClass;
 };
 
 const filterByNameAsc = () => {

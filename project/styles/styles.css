@@ -261,6 +261,11 @@ footer p {
 }
 
 .model-card {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: var(--defaultPadding);
     background-color: var(--defaultCardBg);
     color: var(--defaultWhite);
     border-radius: var(--defaultBorderRadius);
@@ -275,16 +280,24 @@ footer p {
 }
 
 .model-card img {
-    width: 100%;
-    height: auto;
     display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
 }
 
 .model-card-body {
-    padding: 1rem;
+    padding: var(--defaultPadding);
     display: grid;
     gap: 0.5rem;
 }
+
+.model-card h3,
+.model-card p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
 
 .data {
     font-size: 0.95rem;
@@ -297,12 +310,19 @@ footer p {
 
 .button-link {
     display: inline-block;
-    background-color: var(--secondaryColor);
-    color: var(--defaultBlack);
+    background-color: var(--primaryColor);
+    color: var(--defaultWhite);
+    margin-top: 0.5rem;
     padding: 0.6rem 0.9rem;
     border-radius: var(--defaultBorderRadius);
     text-decoration: none;
     width: fit-content;
+}
+
+.button-link:hover {
+    background-color: var(--secondaryColor);
+    color: var(--defaultBlack);
+    cursor: pointer;
 }
 
 .filters {
@@ -415,36 +435,31 @@ filter-select:hover {
     }
 
     .intro {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-items: center;
         align-items: center;
         gap: 3rem;
-        position: static;
-    }
-
-    #overlay {
-        position: static;
-        inset: auto;
-        background-color: transparent;
-        color: var(--defaultBlack);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        text-align: left;
-        padding: 0;
     }
 
     .learn-more {
-        margin: 0;
+        margin: auto;
         background-color: var(--secondaryOverlay);
-        max-width: 500px;
+        max-width: 650px;
+    }
+
+    .learn-more ul {
+        list-style: none;
+    }
+
+    #overlay h2 {
+        margin-top: auto;
     }
 
     #home-gif {
-        width: 100%;
-        height: auto;
         display: block;
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
     }
 
     .wireframe-container {
