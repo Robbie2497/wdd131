@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <link rel="stylesheet" href="styles/printcraft.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/printcraft.js" defer></script>
     <script src="scripts/showcase.js" defer></script>
 </head>
@@ -29,7 +29,7 @@
 
 <main>
     <section class="showcase">
-        <div class="hero">
+        <div class="showcase-hero">
             <h2>Showcase</h2>
             <p>Explore a mix of prints and examples that highlight what 3D printing can do.</p>
         </div>
@@ -39,16 +39,17 @@
             <button class="filter-btn" id="filter-name-asc">Name (A - Z)</button>
             <button class="filter-btn" id="filter-name-desc">Name (Z - A)</button>
             <label for="filter-category" aria-hidden="true"></label>
-            <select class="filter-btn" id="filter-category" name="category">
-                <option value="0">Category</option>
+            <select class="filter-select" id="filter-category" name="category">
+                <option value="0" selected disabled>Category</option>
                 <option value="1">Functional</option>
                 <option value="2">Accessories</option>
                 <option value="3">Decor</option>
                 <option value="4">Toys/Fidgets</option>
+                <option value="4">Toys/Fidgets</option>
             </select>
             <label for="filter-filament-type" aria-hidden="true"></label>
-            <select class="filter-btn" id="filter-filament-type" name="filament-type">
-                <option value="0">Filament Type</option>
+            <select class="filter-select" id="filter-filament-type" name="filament-type">
+                <option value="0" selected disabled>Filament Type</option>
                 <option value="1">PLA</option>
                 <option value="2">PETG</option>
                 <option value="3">Resin</option>

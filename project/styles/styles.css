@@ -2,18 +2,21 @@
     /* Colors */
     --defaultBlack: #000;
     --defaultWhite: #FFFFFF;
-    --defaultCardBg: rgba(0, 0, 0, 0.6);
+    --defaultCardBg: rgba(0, 0, 0, 1);
     --primaryColor: #2e4479;
     --secondaryColor: rgba(123, 158, 255, 1);
     --accentColor: rgba(141, 255, 186, 1);
+    --requiredRed: #f13d3d;
 
 
     /* Utils */
+    --defaultPadding: 1rem;
     --defaultBorder: solid 1px rgba(0, 0, 0, 1);
     --defaultBorderRadius: 8px;
     --secondaryBorderRadius: 8px 8px 0 0;
     --primaryOverlay: rgba(0, 0, 0, 0.7);
     --secondaryOverlay: rgba(180, 180, 180, 0.15);
+    --defaultBoxShadow: 5px 5px var(--secondaryColor);
 }
 
 * {
@@ -167,41 +170,49 @@ footer p {
 .contact-form-container fieldset {
     margin-top: 5rem;
     padding: 1rem;
-    background-color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    color: var(--defaultWhite);
     border-radius: 8px;
 }
 
 .contact-form-container .form-group {
     display: grid;
-    width: 50%;
+    width: 100%;
     grid-template-rows: auto 1fr;
     margin-top: 1rem;
     padding: 0.25rem;
 }
-
 .contact-form-container .form-group label {
     grid-row: 1;
 }
-
 .contact-form-container fieldset h1 {
     text-align: center;
 }
-
 .contact-form-container .form-group input,
 .contact-form-container .form-group textarea,
 .contact-form-container .submit-btn {
     grid-row: 2;
+    margin-top: 0.25rem;
     padding: 0.25rem;
     border: none;
     border-radius: 8px;
+}
+.contact-form-container .form-group input:focus,
+.contact-form-container .form-group textarea:focus,
+.contact-form-container .submit-btn:focus {
+    outline: none;
+}
+
+.required-red {
+    color: var(--requiredRed);
+    margin-top: 0.5rem;
 }
 
 .submit-btn {
     display: block;
     height: 3rem;
     width: 100%;
-    background-color: var(--primaryColor);
-    color: var(--defaultWhite);
+    background-color: var(--secondaryColor);
 }
 
 .submit-btn-container {
@@ -212,6 +223,14 @@ footer p {
     background-color: var(--accentColor);
     color: var(--defaultBlack);
     cursor: pointer;
+}
+
+.showcase-hero {
+    padding: var(--defaultPadding);
+    background-color: var(--primaryOverlay);
+    color: var(--defaultWhite);
+    border-radius: var(--defaultBorderRadius);
+    box-shadow: var(--defaultBoxShadow);
 }
 
 .checkbox-group {
@@ -242,6 +261,13 @@ footer p {
     color: var(--defaultWhite);
     border-radius: var(--defaultBorderRadius);
     overflow: hidden;
+    width: 100%;
+}
+
+.model-card:hover {
+    cursor: pointer;
+    transform: translate(-5px, -5px);
+    box-shadow: var(--defaultBoxShadow);
 }
 
 .model-card img {
@@ -282,18 +308,21 @@ footer p {
     margin: 1rem 0;
 }
 
-.filter-btn {
+.filter-btn,
+.filter-select {
     padding: 0.5rem;
     border-radius: var(--defaultBorderRadius);
     border: 1px solid rgba(0, 0, 0, 0.2);
     background-color: var(--defaultWhite);
 }
 
-.filter-btn:hover {
+.filter-btn:hover,
+filter-select:hover {
     cursor: pointer;
 }
 
-.filter-btn.active-btn {
+.filter-btn.active-btn,
+.filter-select.active-btn {
     background-color: var(--secondaryColor);
 }
 
@@ -307,11 +336,8 @@ footer p {
 
 .card-container {
     display: grid;
-    gap: 1rem;
-}
-
-.card-container-1 {
     grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 /* Ids */
@@ -356,15 +382,25 @@ footer p {
     cursor: pointer;
 }
 
+#name,
+#email {
+    padding: 0.5rem;
+}
+
 @media screen and (min-width: 700px) {
-    .card-container-1 {
-        grid-template-columns: 1fr 1fr;
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
     }
+    .contact-form-container .form-group {
+        /* Need to make the container shrink ltr */
+    }
+
+
 }
 
 @media screen and (min-width: 900px) {
-    .card-container-1 {
-        grid-template-columns: 1fr 1fr 1fr
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .intro {

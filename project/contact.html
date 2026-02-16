@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
-    <link rel="stylesheet" href="styles/printcraft.css">
-<!--    <script src="scripts/printcraft.js"></script>-->
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/contact.js" defer></script>
 </head>
 <body>
 
@@ -28,27 +28,29 @@
 
 <main>
     <div class="contact-form-container">
-        <form action="#">
+        <form id="contact-form" action="#">
             <fieldset>
                 <h1>Contact Us</h1>
                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name">
+                    <label for="name">Name <span class="required-red">*</span></label>
+                    <input type="text" name="name" id="name" required>
+                    <div class="required-red" id="name-error-wrapper" hidden="hidden" aria-hidden="true"><small>* You must enter a name.</small></div>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                    <label for="email">Email <span class="required-red">*</span></label>
+                    <input type="email" name="email" id="email" required>
+                    <div class="required-red" id="email-error-wrapper" hidden="hidden" aria-hidden="true"><small>* You must enter a valid email.</small></div>
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
                     <textarea id="message" rows="5"></textarea>
                 </div>
                 <div class="checkbox-group">
-                    <input type="checkbox" name="subscribe_yn" id="subscribe_yn">
-                    <label for="subscribe_yn">Receive more info?</label>
+                    <input type="checkbox" name="more" id="more">
+                    <label for="more">Receive more info?</label>
                 </div>
                 <div class="submit-btn-container">
-                    <button class="submit-btn" type="submit">Send My Inquiry</button>
+                    <button id="submit-btn" class="submit-btn" type="submit">Send My Inquiry</button>
                 </div>
             </fieldset>
         </form>
